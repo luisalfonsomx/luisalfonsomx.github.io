@@ -1,0 +1,71 @@
+---
+layout: default
+title: Luis Alfonso Silva Romo
+home: true
+---
+<div class="row">
+    <div class="col-lg-12">
+      <div id="main-slider" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+          <li data-target="#main-slider" data-slide-to="1"></li>
+          <li data-target="#main-slider" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <div style="position: absolute; max-width: 250px; top: 60%; left: 20%; z-index: 100;">
+              {% include socialnetworks.html %}
+            </div>
+            <a href="http://luisalfonsosilva.mx/acerca-de/"><img src="images/Slide1.jpg" alt="..."></a>
+            <div class="carousel-caption">
+            </div>
+          </div>
+          <div class="item">
+            <div style="position: absolute; max-width: 250px; bottom: 10%; left: 5%; z-index: 100;">
+              {% include socialnetworks.html %}
+            </div>
+            <a href="http://luisalfonsosilva.mx/2014/07/27/un-derecho-igual-a-una-obligacion/"><img src="images/Slide2.jpg" alt="..."></a>
+            <div class="carousel-caption">
+            </div>
+          </div>
+          <div class="item">
+            <a href="http://luisalfonsosilva.mx/2014/07/27/reflexiones-de-la-guelaguetza/"><img src="images/Slide3.jpg" alt="..."></a>
+            <div class="carousel-caption">
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#main-slider" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#main-slider" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+<div class="row">
+  <div class="col-lg-4">
+    <h2>Bienvenid@:</h2>  
+    <hr>
+    <p>Agradezco tu visita a este sitio y tu tiempo de lectura. Te invito a que te sumes a las iniciativas colectivas propuestas por personas emprendedoras y responsables socialmente como tú. Éste espacio es de todas las personas que deseen mejorar la calidad de vida en México y especialmente en Oaxaca.</p>
+    <p><a class="btn btn-primary" href="http://luisalfonsosilva.mx/2014/07/20/bienvenido/" role="button">Ver más &raquo;</a></p>
+  </div>
+
+	<div class="col-lg-4">
+	  <a href="{{site.baseurl}}/{{ site.categories['blog'].first.url }}" role="button" style="text_decoration: none;"><h2>{{ site.categories['blog'].first.title }}</h2></a>
+    <hr>
+	  <p>{{ site.categories['blog'].first.excerpt }}</p>
+	  <p><a class="btn btn-primary" href="{{site.baseurl}}/{{ site.categories['blog'].first.url }}" role="button">Ver más &raquo;</a></p>
+	</div>
+
+	<div class="col-lg-4">
+	  <h2><span class="text-info">¿Cómo</span> te puedo ayudar?</h2>
+    <hr>
+	  {% include formulario.html %}
+	</div>
+	</div>

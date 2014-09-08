@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<row>
+	<div class="col-sm-8">
+		<h1 class="category">{{ page.namecategory }}</h1>
+		<ul class="posts" style="padding-left: 0px;">
+		{% for post in site.categories[page.category] %}
+		    <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+		    <p><small>{{ post.date | date_to_long_string }}</small></p>
+		    <div>
+				<div class="pull-left" style="padding-right: 10px;">
+					<div class="fb-share-button" data-type="button" data-href="{{ site.baseurl }}{{ post.url }}"></div>
+				</div>
+				<div class="pull-left">
+					<a href="https://twitter.com/share" class="twitter-share-button" data-lang="es" data-count="none" data-text="{{ post.title }}" data-url="{{ site.baseurl }}{{ post.url }}">Tweet</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				</div>
+				<br>
+			</div>
+		    <p>{{ post.excerpt }}</p>
+		    <p>
+		    	<a href="{{site.baseurl}}/{{ post.url }}" role="button">Leer más</a>&nbsp;|&nbsp;
+		    	<a href="{{site.baseurl}}/{{ post.url }}#comments" role="button">Hacer un comentario</a>
+		    </p>
+		{% endfor %}
+		</ul>
+	</div>
+	<div class="col-sm-4">
+		<div>
+			<h3>Sígueme</h3>
+			<hr>
+			{% include socialnetworks.html %}
+			
+			<h3>Cómo te puedo ayudar</h3>
+			<hr>
+			{% include formulario.html %}
+		</div>
+	</div>
+</row>
